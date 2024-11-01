@@ -1,6 +1,6 @@
 const { describe, it, expect, beforeAll, afterAll } = require('@jest/globals')
-const { User } = require('.')
-const db = require('../db/config')
+const { User } = require('./index');
+const { db } = require('../db/config');
 
 // define in global scope
 let user
@@ -17,6 +17,10 @@ afterAll(async () => await db.close())
 describe('User', () => {
   it('has an id', async () => {
     expect(user).toHaveProperty('id')
+  })
+
+  test("has correct username", async () => {
+    expect(user.username).toBe('gandalf');
   })
 
   /**
