@@ -8,7 +8,7 @@ let card
 // clear db and create new user before tests
 beforeAll(async () => {
   await db.sync({ force: true })
-  card = await Card.create({ name: 'Aragorn', mojo: 20, stamina: 75, imgURL: 'hotaragorn.numenor.net' })
+  card = await Card.create({ name: 'Aragorn', mojo: 20, stamina: 75, imgUrl: 'hotaragorn.numenor.net' })
 })
 
 // clear db after tests
@@ -32,7 +32,7 @@ describe('Card', () => {
   })
 
   test("has correct imgURL", async () => {
-    expect(card.imgURL).toBe('hotaragorn.numenor.net');
+    expect(card.imgUrl).toBe('hotaragorn.numenor.net');
   })
 
   /**

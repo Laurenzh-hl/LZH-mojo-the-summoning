@@ -6,7 +6,7 @@ Card.init({
     name: DataTypes.STRING,
     mojo: DataTypes.INTEGER,
     stamina: DataTypes.INTEGER,
-    imgURL: DataTypes.STRING
+    imgUrl: DataTypes.STRING
 }, {
     sequelize: db
 });

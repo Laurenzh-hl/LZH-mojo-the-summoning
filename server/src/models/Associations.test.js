@@ -24,8 +24,8 @@ describe('Associations', () => {
 
   test("deck can have many cards", async () => {
     let myDeck = await Deck.create({name: 'The Fellowship', xp: 45});
-    let card1 = await Card.create({ name: 'Aragorn', mojo: 20, stamina: 75, imgURL: 'hotaragorn.numenor.net' });
-    let card2 = await Card.create({ name: 'Frodo', mojo: 5, stamina: 55, imgURL: 'elijahasfrodo.lotr.net' });
+    let card1 = await Card.create({ name: 'Aragorn', mojo: 20, stamina: 75, imgUrl: 'hotaragorn.numenor.net' });
+    let card2 = await Card.create({ name: 'Frodo', mojo: 5, stamina: 55, imgUrl: 'elijahasfrodo.lotr.net' });
 
     await myDeck.addCard(card1);
     await myDeck.addCard(card2);
@@ -52,8 +52,8 @@ describe('Associations', () => {
 
   test("attack can have many cards", async () => {
     let myAttack = await Attack.create({ title: 'Slash of Anduril', mojoCost: 5, staminaCost: 10 });
-    let card1 = await Card.create({ name: 'Aragorn', mojo: 20, stamina: 75, imgURL: 'hotaragorn.numenor.net' });
-    let card2 = await Card.create({ name: 'Frodo', mojo: 5, stamina: 55, imgURL: 'elijahasfrodo.lotr.net' });
+    let card1 = await Card.create({ name: 'Aragorn', mojo: 20, stamina: 75, imgUrl: 'hotaragorn.numenor.net' });
+    let card2 = await Card.create({ name: 'Frodo', mojo: 5, stamina: 55, imgUrl: 'elijahasfrodo.lotr.net' });
 
     await myAttack.addCard(card1);
     await myAttack.addCard(card2);
